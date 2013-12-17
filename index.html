@@ -1,79 +1,223 @@
-<!DOCTYPE html>
 <html>
+<head>
+	<title>微博装逼神器 - zhuangbility</title>
+	<meta charset="UTF-8">
+	<!-- JQuery -->
+	<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+	<!-- Bootstrap -->
+	<script type="text/javascript" src="bootstrap.min.js"></script>
+	<link type="text/css" href="bootstrap.min.css" rel="stylesheet">
+	<link type="text/css" href="bootstrap-responsive.min.css" rel="stylesheet">
+	<!-- 自定义css -->
+	<link type="text/css" href="main.css" rel="stylesheet">
+	<!-- 自定义js -->
+	<script type="text/javascript">
+		$(function(){
+			$('#myCarousel').carousel();
+			$("#device").change(ShowWeiboModal);
+			$("#btn_showmodal").click(ShowWeiboModal);
+		});
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Zhuangbility weibo : 一个利用微博尾巴装逼的单页面" />
+		function ShowWeiboModal(){
+			var devicetext="http://widget.weibo.com/dialog/PublishWeb.php?app_src="+$("#device").val()+"&button=publish";
+			$("#weibo").attr("src",devicetext);
+			$("#devicename").text($("#device option:selected").text());
+			$('#myModal').modal();
+		}
+	</script>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+</head>
+<body>
+<!-- 
 
-    <title>Zhuangbility weibo</title>
-  </head>
+	写堆废话先：
+	这页面写得很烂，也懒得去优化什么的，反正就是用来娱乐娱乐的...
 
-  <body>
+	既然你都看到这段话了，估计你也是想看怎么实现的吧？
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/viko16/zhuangbility_weibo">View on GitHub</a>
+	来来来，直接告诉你——
 
-          <h1 id="project_title">Zhuangbility weibo</h1>
-          <h2 id="project_tagline">一个利用微博尾巴装逼的单页面</h2>
+	http://widget.weibo.com/dialog/PublishWeb.php?app_src=356EzI&button=publish
+	其中，app_src后面的值就代表了说发出去的微博的尾巴，至于那个值怎么来的，自己找规律吧，哈哈哈哈哈哈哈哈哈
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/viko16/zhuangbility_weibo/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/viko16/zhuangbility_weibo/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+		2013.12.15 留
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+	 -->
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+	<!-- 顶部导航栏 -->
+	<div class="navbar-wrapper">
+	    <div class="container">
+	        <div class="navbar navbar-inverse">
+	            <div class="navbar-inner">
+	                <button type="button" class="btn btn-navbar collapsed" data-toggle="collapse"
+	                data-target=".nav-collapse">
+	                    <span class="icon-bar">
+	                    </span>
+	                    <span class="icon-bar">
+	                    </span>
+	                    <span class="icon-bar">
+	                    </span>
+	                </button>
+	                <a class="brand" href="#">
+	                    一秒变土豪
+	                </a>
+	                <div class="nav-collapse collapse" style="height: 0px;">
+	                    <ul class="nav">
+	                        <li class="active">
+	                            <a href="index.html">Home</a>
+	                        </li>
+	                        <li>
+	                            <a href="javascript:alert('暂无 _(:3」∠)_ ')">About</a>
+	                        </li>
+	                        <li>
+	                            <a href="http://ca.sise.com.cn" target="_blank">CA</a>
+	                        </li>
+	                    </ul>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<!-- /顶部导航栏 -->
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+	<!-- 轮播幻灯片 -->
+	<div id="myCarousel" class="carousel slide">
+	    <div class="carousel-inner">
+	        <div class="item active">
+	            <img src="slide-01.jpg" alt="">
+	            <div class="container">
+	                <div class="carousel-caption">
+	                    <h1>
+	                        想跟土豪做朋友？
+	                    </h1>
+	                    <p class="lead">
+	                        这个神器帮到你！
+	                    </p>
+	                    <a class="btn btn-large btn-primary" href="#">
+	                        壕（们），我来了！
+	                    </a>
+	                </div>
+	            </div>
+	        </div>
+	        <div class="item">
+	            <img src="slide-02.jpg" alt="">
+	            <div class="container">
+	                <div class="carousel-caption">
+	                    <h1>
+	                        想装逼却无从下手？
+	                    </h1>
+	                    <p class="lead">
+	                        装个逼，我们还是朋友
+	                    </p>
+	                    <a class="btn btn-large btn-primary" href="#">
+	                        点击进入装逼模式！
+	                    </a>
+	                </div>
+	            </div>
+	        </div>
+	        <div class="item">
+	            <img src="slide-03.jpg" alt="">
+	            <div class="container">
+	                <div class="carousel-caption">
+	                    <h1>
+	                        还没搞定丈母娘？
+	                    </h1>
+	                    <p class="lead">
+	                        “年轻人，其实你挺适合我女儿的！”
+	                    </p>
+	                    <a class="btn btn-large btn-primary" href="#">
+	                        终于不用等今晚发梦了！
+	                    </a>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+	        ‹
+	    </a>
+	    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+	        ›
+	    </a>
+	</div>
+	<!-- /轮播幻灯片 -->
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+	
+	<div class="container">
+		
+		<div class="marketing">
+			<div class="row">
+			    <div class="span4">
+			        <img style="width: 180px; height: 140px;" src="1.jpg">
+			        <h2>1. 登录微博</h2>
+			        <p>
+			        	废话，不登录怎么发围脖嘛  (ι´Д｀)ﾉ 
+			        	<br><br>
+			        	在其他页面 <a href="http://weibo.com" target="_blank">登录渣浪微博</a> 就好啦
+			        	<br><br>
+			        	神器酱才不偷你家帐号密码呢 ⊙﹏⊙
+			        </p>
+			    </div>
+			    <div class="span4">
+			        <img style="width: 180px; height: 140px;" src="2.jpg">
+			        <h2>2. 选择逼格</h2>
+			        <p>
+			        	<br>
+		        		<select name="" id="device">
+		        			<option value="356EzI">MOTO X</option>
+		        			<option value="5ka3Zi">Nokia</option>
+		        			<option value="1ugly4">诺基亚Lumia800</option>
+		        			<option value="1m2gTF">Lumia1020</option>
+		        			<option value="elENv">Lumia1520</option>
+		        			<option value="5gETFb">New HTC One</option>
+		        			<option value="3G5oUM">iPhone 5s</option>
+		        			<option value="9ksdit">iPhone客户端</option>
+		        			<option value="4ACxed">iPad客户端</option>
+		        			<option value="c66T5g">Android客户端</option>
+		        			<option value="2o92Kh">vivo_Xplay</option>
+		        		</select>
+		        		<br>
+		        		<button type="submit" id="btn_showmodal" class="btn btn-primary">我等不及了！</button>
+		        		<br>
+			        </p>
+			    </div>
+			    <div class="span4">
+			        <img style="width: 180px; height: 140px;" src="3.gif">
+			        <h2>3. 剩下你懂</h2>
+			        <p>
+			            “哎呀，IPhone 5s 的字真难看呀！”<br><br>
+			            “Lumia 的手感也不过如此嘛~”<br><br>
+			            “这五千来块的手机就是信号差呀！！”
+			        </p>
+			    </div>
+			</div>
+		</div>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+		<!-- 弹出的微博框 -->
+		<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h3 id="myModalLabel">用 <span id="devicename"></span> 发微博</h3>
+			</div>
+			<div class="modal-body">
+				<iframe name="weibo" id="weibo" width="627px" height="300px" frameborder="0" allowtransparency="true" scrolling="no" src="http://widget.weibo.com/dialog/PublishWeb.php?app_src=356EzI&button=publish"></iframe>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">关闭</button>
+			</div>
+		</div>
+		<!-- /弹出的微博框 -->
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Zhuangbility weibo maintained by <a href="https://github.com/viko16">viko16</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+		<hr class="featurette-divider">
+		<footer>
+			<p>@ 2013 CA工作室出品</p>
+		</footer>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			console.error("\n☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆\n☆☆☆☆☆     没事看什么源码，看body下面注释去！     ☆☆☆☆☆\n☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆\n");
+		});
+	</script>
+</body>
 </html>
