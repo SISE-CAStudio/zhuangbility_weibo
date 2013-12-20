@@ -13,6 +13,11 @@
 	<!-- 自定义js -->
 	<script type="text/javascript">
 		$(function(){
+			$.getJSON("device.json",function(result){
+			    $.each(result, function(k, v){
+			      $("#device").append("<option value="+k+">"+v+"</option>");
+			    });
+			  });
 			$('#myCarousel').carousel();
 			$("#device").change(ShowWeiboModal);
 			$("#btn_showmodal").click(ShowWeiboModal);
@@ -169,17 +174,6 @@
 			        <p>
 			        	<br>
 		        		<select name="" id="device">
-		        			<option value="356EzI">MOTO X</option>
-		        			<option value="5ka3Zi">Nokia</option>
-		        			<option value="1ugly4">诺基亚Lumia800</option>
-		        			<option value="1m2gTF">Lumia1020</option>
-		        			<option value="elENv">Lumia1520</option>
-		        			<option value="5gETFb">New HTC One</option>
-		        			<option value="3G5oUM">iPhone 5s</option>
-		        			<option value="9ksdit">iPhone客户端</option>
-		        			<option value="4ACxed">iPad客户端</option>
-		        			<option value="c66T5g">Android客户端</option>
-		        			<option value="2o92Kh">vivo_Xplay</option>
 		        		</select>
 		        		<br>
 		        		<button type="submit" id="btn_showmodal" class="btn btn-primary">我等不及了！</button>
