@@ -6,4 +6,4 @@ zhuangbility_weibo
 
 demo
 -----
-[装逼走起](http://viko16.github.io/zhuangbility_weibo)
+[传说门](http://viko16.github.io/zhuangbility_weibo/)
