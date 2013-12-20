@@ -19,7 +19,7 @@
 		});
 
 		function ShowWeiboModal(){
-			var devicetext="http://widget.weibo.com/dialog/PublishWeb.php?app_src="+$("#device").val()+"&button=publish";
+			var devicetext="http://widget.weibo.com/dialog/publishmobile.php?app_src="+$("#device").val()+"&button=publish";
 			$("#weibo").attr("src",devicetext);
 			$("#devicename").text($("#device option:selected").text());
 			$('#myModal').modal();
@@ -41,6 +41,10 @@
 	其中，app_src后面的值就代表了说发出去的微博的尾巴，至于那个值怎么来的，自己找规律吧，哈哈哈哈哈哈哈哈哈
 
 		2013.12.15 留
+	
+	http://widget.weibo.com/dialog/publishmobile.php?app_src=356EzI&button=publish
+	改成了publishmoblie就是手机版了，效果更好
+		2013.12.20 留
 
 	 -->
 
@@ -198,10 +202,10 @@
 		<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-				<h3 id="myModalLabel">用 <span id="devicename"></span> 发微博</h3>
+				<h4 id="myModalLabel">用 <span id="devicename"></span> 发微博</h4>
 			</div>
 			<div class="modal-body">
-				<iframe name="weibo" id="weibo" width="627px" height="300px" frameborder="0" allowtransparency="true" scrolling="no" src="http://widget.weibo.com/dialog/PublishWeb.php?app_src=356EzI&button=publish"></iframe>
+				<iframe name="weibo" id="weibo" width="560px" height="330px" frameborder="0" allowtransparency="true" scrolling="no" src="http://widget.weibo.com/dialog/PublishWeb.php?app_src=356EzI&button=publish"></iframe>
 			</div>
 			<div class="modal-footer">
 				<button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">关闭</button>

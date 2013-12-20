@@ -9,8 +9,8 @@
       color: #5a5a5a;
     }
 
-    .modal{
-      width: 660px;
+    .modal-body {
+      padding: 0;
     }
 
     .navbar-wrapper {
